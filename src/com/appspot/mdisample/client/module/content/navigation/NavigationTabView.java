@@ -1,6 +1,7 @@
 package com.appspot.mdisample.client.module.content.navigation;
 
 import com.appspot.mdisample.client.module.content.navigation.NavigationTabPresenter.MyView;
+import com.appspot.mdisample.client.place.NameTokens;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.logical.shared.SelectionEvent;
@@ -24,7 +25,7 @@ public class NavigationTabView extends ViewWithControls<NavigationTabView.MyCont
 	}
 
 	public interface MyControls extends Controls {
-		void onNewRequest(String name);
+		void onNewRequest(String token, String parameter, boolean inNewTab);
 
 		void onTabSelected(int intex);
 	}
@@ -64,11 +65,19 @@ public class NavigationTabView extends ViewWithControls<NavigationTabView.MyCont
 	@UiHandler("newButton")
 	void onNewButtonClicked(ClickEvent event) {
 		counter++;
-		getControls().onNewRequest("List-" + counter);
+		getControls().onNewRequest(NameTokens.list + "=", "List-" + counter, true);
 	}
 
 	@UiHandler("tabBar")
 	void onTabBarSelection(SelectionEvent<Integer> event) {
 		getControls().onTabSelected(event.getSelectedItem());
+	}
+
+	@Override
+	public void insertTab(Widget tabElement, int index) {
+		//int currentTab = tabBar.getSelectedTab();
+		tabBar.insertTab(tabElement, index);
+		tabBar.removeTab(index + 1);
+		
 	}
 }

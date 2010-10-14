@@ -1,5 +1,6 @@
-package com.appspot.mdisample.client.module.content.navigation;
+package com.appspot.mdisample.client.event;
 
+import com.appspot.mdisample.client.module.content.navigation.NavigationTabElement;
 import com.google.gwt.event.shared.EventHandler;
 import com.google.gwt.event.shared.GwtEvent;
 import com.gwtplatform.mvp.client.HasEventBus;
@@ -35,10 +36,7 @@ public class NavigationTabEvent extends GwtEvent<NavigationTabEvent.NavigationTa
 		}
 	}
 
-	public static Type<NavigationTabHandler> getType() {
-		
-		// FIXME: Why isn't this set in the constructor instead?
-		
+	public static Type<NavigationTabHandler> getType() {	
 		if (type == null) {
 			type = new Type<NavigationTabHandler>();
 		}
@@ -47,12 +45,15 @@ public class NavigationTabEvent extends GwtEvent<NavigationTabEvent.NavigationTa
 
 	private NavigationTabElement element;
 	private Action action;
-
+	
+	
 	public NavigationTabEvent(Action action, NavigationTabElement element) {
 		this.element = element;
 		this.action = action;
+		
 	}
 
+	
 	@Override
 	protected void dispatch(NavigationTabHandler handler) {
 		switch (action) {

@@ -1,8 +1,8 @@
 package com.appspot.mdisample.client.module.content;
 
+import com.appspot.mdisample.client.event.NavigationTabEvent;
 import com.appspot.mdisample.client.module.AppPresenter;
 import com.appspot.mdisample.client.module.content.navigation.NavigationTabElement;
-import com.appspot.mdisample.client.module.content.navigation.NavigationTabEvent;
 import com.appspot.mdisample.client.module.content.navigation.NavigationTabPresenter;
 import com.google.gwt.event.shared.GwtEvent.Type;
 import com.google.gwt.user.client.Command;
@@ -37,22 +37,14 @@ public class ContentPresenter extends Presenter<ContentPresenter.ContentView, Co
 	public static final Type<RevealContentHandler<?>> SLOT_content = new Type<RevealContentHandler<?>>();
 	public static final Object SLOT_navigation = new Object();
 
-	//private AbstractContentProxyFactory<ListPresenter, ListViewImpl> listFactory;
-	//private AbstractContentProxyFactory<DetailPresenter, DetailViewImpl> detailFactory;
 	private NavigationTabPresenter navtab;
+
 
 	@Inject
 	public ContentPresenter(EventBus eventBus, ContentView view, ContentProxy proxy,
-			ProxyFailureHandler failureHandler, PlaceManager placeManager,
-			/*Provider<AbstractContentPresenterProvider<ListPresenter, ListViewImpl>> listProvider,*/
-			/*Provider<AbstractContentPresenterProvider<DetailPresenter, DetailViewImpl>> detailProvider,*/
-			Provider<NavigationTabPresenter> navigation) {
+			ProxyFailureHandler failureHandler, PlaceManager placeManager, Provider<NavigationTabPresenter> navigation) {
 		super(eventBus, view, proxy);
 
-		//this.listFactory = new AbstractContentProxyFactory<ListPresenter, ListViewImpl>(listProvider, failureHandler,
-		//	placeManager, eventBus, ListPresenter.class);
-		//this.detailFactory = new AbstractContentProxyFactory<DetailPresenter, DetailViewImpl>(detailProvider,
-		//	failureHandler, placeManager, eventBus, ArtistPresenter.class);
 		navtab = navigation.get();
 	}
 

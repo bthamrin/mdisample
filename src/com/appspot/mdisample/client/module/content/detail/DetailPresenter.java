@@ -1,4 +1,4 @@
-package com.appspot.mdisample.client.module.content.list;
+package com.appspot.mdisample.client.module.content.detail;
 
 import com.appspot.mdisample.client.module.content.ContentPresenter;
 import com.appspot.mdisample.client.module.content.abstractcontent.AbstractContentPresenter;
@@ -6,23 +6,31 @@ import com.gwtplatform.mvp.client.EventBus;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 
 
-public class ListPresenter extends AbstractContentPresenter {
+public class DetailPresenter extends AbstractContentPresenter {
 
-	public interface ListProxy extends AbstractContentPresenter.AbstractContentProxy<ListPresenter> {
+	public interface DetailProxy extends AbstractContentPresenter.AbstractContentProxy<DetailPresenter> {
 	}
 
 
-	public interface ListView extends AbstractContentPresenter.AbstractContentView {
+	public interface DetailView extends AbstractContentPresenter.AbstractContentView {
+		void setHeader(String text);
 	}
 
 
 	private String name;
+	private DetailViewImpl view;
 
 
-	public ListPresenter(EventBus eventBus, AbstractContentView view, AbstractContentProxy proxy, String name) {
-		super(eventBus, view, proxy, name);
-		
+	public DetailPresenter(EventBus eventBus, AbstractContentView view, AbstractContentProxy proxy, String name,
+			int tabGroup) {
+		super(eventBus, view, proxy, name, tabGroup);
+
 		this.name = name;
+
+		// FIXME: Possible to avoid this?
+		this.view = (DetailViewImpl) getView();
+
+		this.view.setHeader(name);
 	}
 
 
@@ -52,11 +60,6 @@ public class ListPresenter extends AbstractContentPresenter {
 	@Override
 	public String getToken() {
 		return getProxy().getNameToken();
-	}
-
-	@Override
-	public boolean isClosable() {
-		return true;
 	}
 
 }

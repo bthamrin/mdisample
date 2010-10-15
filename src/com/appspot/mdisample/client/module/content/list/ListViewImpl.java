@@ -1,4 +1,4 @@
-package com.appspot.mdisample.client.module.content.detail;
+package com.appspot.mdisample.client.module.content.list;
 
 import java.util.Random;
 
@@ -14,11 +14,11 @@ import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
 
 
-public class DetailViewImpl extends ViewImpl implements DetailPresenter.DetailView {
+public class ListViewImpl extends ViewImpl implements ListPresenter.ListView {
 
-	private static DetailViewImplUiBinder uiBinder = GWT.create(DetailViewImplUiBinder.class);
+	private static ListViewImplUiBinder uiBinder = GWT.create(ListViewImplUiBinder.class);
 
-	interface DetailViewImplUiBinder extends UiBinder<Widget, DetailViewImpl> {
+	interface ListViewImplUiBinder extends UiBinder<Widget, ListViewImpl> {
 	}
 
 
@@ -31,7 +31,7 @@ public class DetailViewImpl extends ViewImpl implements DetailPresenter.DetailVi
 
 
 	@Inject
-	public DetailViewImpl() {
+	public ListViewImpl() {
 		widget = uiBinder.createAndBindUi(this);
 
 		Random r = new Random();

@@ -39,7 +39,6 @@ public class AppViewImpl extends ViewImpl implements AppPresenter.AppView {
 		return widget;
 	}
 
-
 	@Override
 	public void setInSlot(Object slot, Widget content) {
 		if (slot == AppPresenter.SLOT_content) {

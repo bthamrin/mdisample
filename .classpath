@@ -7,6 +7,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/guice-2.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gin-r137.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/aopalliance.jar"/>
-	<classpathentry kind="lib" path="/gwtp-editor/war/WEB-INF/lib/gwtp-0.4-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwtp-0.4-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

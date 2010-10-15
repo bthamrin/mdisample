@@ -5,6 +5,8 @@ import com.appspot.mdisample.client.module.AppViewImpl;
 import com.appspot.mdisample.client.module.content.ContentPresenter;
 import com.appspot.mdisample.client.module.content.ContentViewImpl;
 import com.appspot.mdisample.client.module.content.ContentPresenter.ContentView;
+import com.appspot.mdisample.client.module.content.detail.DetailViewImpl;
+import com.appspot.mdisample.client.module.content.detail.DetailPresenter.DetailView;
 import com.appspot.mdisample.client.module.content.home.HomePresenter;
 import com.appspot.mdisample.client.module.content.home.HomeViewImpl;
 import com.appspot.mdisample.client.module.content.home.HomePresenter.HomeProxy;
@@ -44,7 +46,7 @@ public class ClientModule extends AbstractPresenterModule {
 		bindPresenter(HomePresenter.class, HomePresenter.HomeView.class, HomeViewImpl.class, HomeProxy.class);
 
 		bind(ListView.class).to(ListViewImpl.class);
-		//bind(DetailView.class).to(DetailViewImpl.class);
+		bind(DetailView.class).to(DetailViewImpl.class);
 
 	}
 

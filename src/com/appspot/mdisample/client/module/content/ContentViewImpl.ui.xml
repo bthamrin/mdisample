@@ -1,17 +1,19 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui" >
-	
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
 	<ui:style>
-		.background { background-color: fuchsia; }
+		.background {
+			background-color: fuchsia;
+		}
 	</ui:style>
-	
+
 	<g:LayoutPanel>
 		<g:layer top="0" height="50px" left="0" right="0">
-			<g:SimplePanel ui:field="navigationPanel"/>
+			<g:SimplePanel ui:field="navigationPanel" />
 		</g:layer>
 		<g:layer top="50px" bottom="0" left="0" right="0">
-			<g:SimplePanel ui:field="contentPanel"/>
+			<g:SimplePanel ui:field="contentPanel" />
 		</g:layer>
 	</g:LayoutPanel>
 

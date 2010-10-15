@@ -17,9 +17,9 @@ public class NewTabEvent extends GwtEvent<NewTabEvent.NewTabEventHandler> {
 
 	private static Type<NewTabEventHandler> TYPE = new Type<NewTabEventHandler>();
 
-	public static void fire(HasHandlers source, String token, String parameter, boolean reUseTab) {
+	public static void fire(HasHandlers source, String token, String parameter) {
 		if (TYPE != null) {
-			source.fireEvent(new NewTabEvent(token, parameter, reUseTab));
+			source.fireEvent(new NewTabEvent(token, parameter));
 		}
 	}
 
@@ -35,10 +35,9 @@ public class NewTabEvent extends GwtEvent<NewTabEvent.NewTabEventHandler> {
 	
 	private String token;
 	private String parameter;
-	private boolean reUseTab;
 	
 	
-	public NewTabEvent(String token, String parameter, boolean reUseTab) {
+	public NewTabEvent(String token, String parameter) {
 		this.token = token;
 		this.parameter = parameter;
 	}
@@ -56,10 +55,5 @@ public class NewTabEvent extends GwtEvent<NewTabEvent.NewTabEventHandler> {
 	public String getParameter() {
 		return parameter;
 	}
-	
-	public boolean getReUseTab() {
-		return reUseTab;
-	}
-	
 	
 }

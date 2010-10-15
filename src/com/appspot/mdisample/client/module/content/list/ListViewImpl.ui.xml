@@ -1,6 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
 	<ui:style>
 		.background {
 			background-color: #444;
@@ -18,12 +19,12 @@
 			margin-left: 24px !important;
 			padding-top: 14px !important;
 		}
-</ui:style>
+	</ui:style>
 
 	<g:HTMLPanel styleName="{style.background}" height="100%">
-		<g:Label styleName="{style.type}">This page is an instance of Detail</g:Label>
+		<g:Label styleName="{style.type}">This page is an instance of List</g:Label>
 		<g:Label ui:field="title" styleName="{style.header}" />
-		<p>Other detail pages:</p>
 		<g:VerticalPanel ui:field="panel" />
 	</g:HTMLPanel>
+
 </ui:UiBinder> 

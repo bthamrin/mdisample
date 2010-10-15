@@ -14,22 +14,20 @@ import com.gwtplatform.mvp.client.proxy.ProxyFailureHandler;
 
 
 @GinModules( { DispatchAsyncModule.class, ClientModule.class })
-public interface ClientGinjector extends Ginjector
-{
-	
+public interface ClientGinjector extends Ginjector {
 	public ProxyFailureHandler getProxyFailureHandler();
-	
+
 	public PlaceManager getPlaceManager();
-	
+
 	public EventBus getEventBus();
-	
+
 	public DispatchAsync getDispatcher();
 
-	
+
 	public Provider<AppPresenter> getAppPresenter();
-	
+
 	public Provider<ContentPresenter> getContentPresenter();
-	
+
 	public Provider<HomePresenter> getHomePresenter();
-	
+
 }

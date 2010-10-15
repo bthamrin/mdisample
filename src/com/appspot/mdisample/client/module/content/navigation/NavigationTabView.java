@@ -75,9 +75,8 @@ public class NavigationTabView extends ViewWithControls<NavigationTabView.MyCont
 
 	@Override
 	public void insertTab(Widget tabElement, int index) {
-		//int currentTab = tabBar.getSelectedTab();
 		tabBar.insertTab(tabElement, index);
 		tabBar.removeTab(index + 1);
-		
+
 	}
 }

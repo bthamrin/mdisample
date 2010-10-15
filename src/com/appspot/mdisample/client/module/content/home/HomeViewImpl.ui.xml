@@ -6,24 +6,21 @@
 			background-color: #444;
 		}
 		
-		.header {
-			font-size: 6em;
-			font-weight: bold;
-			color: #ccc;
-			margin-left: 20px !important;
-		}
-		
 		.type {
 			color: #777;
 			margin-left: 24px !important;
 			padding-top: 14px !important;
 		}
-</ui:style>
+	</ui:style>
 
 	<g:HTMLPanel styleName="{style.background}" height="100%">
-		<g:Label styleName="{style.type}">This page is an instance of Detail</g:Label>
-		<g:Label ui:field="title" styleName="{style.header}" />
-		<p>Other detail pages:</p>
-		<g:VerticalPanel ui:field="panel" />
+		<g:Label styleName="{style.type}">This page is an instance of Home</g:Label>
+		<h1>HOME</h1>
+		<p>
+			<g:Hyperlink targetHistoryToken="!list=List-100">List-100</g:Hyperlink>
+			<g:Hyperlink targetHistoryToken="!list=List-200">List-200</g:Hyperlink>
+			<g:Hyperlink targetHistoryToken="!list=List-300">List-300</g:Hyperlink>
+		</p>
 	</g:HTMLPanel>
+
 </ui:UiBinder> 

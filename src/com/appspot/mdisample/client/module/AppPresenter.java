@@ -39,5 +39,4 @@ public class AppPresenter extends Presenter<AppPresenter.AppView, AppPresenter.A
 		RevealRootLayoutContentEvent.fire(this, this);
 	}
 
-
 }

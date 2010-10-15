@@ -3,8 +3,10 @@ package com.appspot.mdisample.client.module.content.navigation;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.appspot.mdisample.client.event.CloseTabEvent;
 import com.appspot.mdisample.client.event.NavigationTabEvent;
 import com.appspot.mdisample.client.event.NewTabEvent;
+import com.appspot.mdisample.client.event.CloseTabEvent.CloseTabHandler;
 import com.appspot.mdisample.client.event.NavigationTabEvent.NavigationTabHandler;
 import com.appspot.mdisample.client.event.NewTabEvent.NewTabEventHandler;
 import com.appspot.mdisample.client.module.content.abstractcontent.AbstractContentPresenterProvider;
@@ -14,7 +16,6 @@ import com.appspot.mdisample.client.module.content.detail.DetailPresenter;
 import com.appspot.mdisample.client.module.content.detail.DetailViewImpl;
 import com.appspot.mdisample.client.module.content.list.ListPresenter;
 import com.appspot.mdisample.client.module.content.list.ListViewImpl;
-import com.appspot.mdisample.client.module.content.navigation.CloseTabEvent.CloseTabHandler;
 import com.appspot.mdisample.client.module.content.navigation.NavigationTabView.MyControls;
 import com.appspot.mdisample.client.place.NameTokens;
 import com.google.gwt.user.client.Command;
@@ -107,12 +108,12 @@ public class NavigationTabPresenter extends PresenterWidget<NavigationTabPresent
 
 		if (!currentElements.contains(element)) {
 			int index = -1;
-			for (int i = 0; i < currentElements.size(); i++){
-				if(currentElements.get(i).getTabGroup() == element.getTabGroup())
+			for (int i = 0; i < currentElements.size(); i++) {
+				if (currentElements.get(i).getTabGroup() == element.getTabGroup())
 					index = currentElements.indexOf(currentElements.get(i));
 			}
-				
-			if(index > -1){
+
+			if (index > -1) {
 				getView().insertTab(createTab(element), index);
 				currentElements.remove(index);
 				currentElements.add(index, element);
@@ -121,7 +122,7 @@ public class NavigationTabPresenter extends PresenterWidget<NavigationTabPresent
 				getView().createTab(createTab(element));
 				currentElements.add(element);
 			}
-				
+
 		}
 
 		currentElement = element;

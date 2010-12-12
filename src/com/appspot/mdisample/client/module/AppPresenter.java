@@ -12,6 +12,10 @@ import com.gwtplatform.mvp.client.proxy.RevealContentHandler;
 import com.gwtplatform.mvp.client.proxy.RevealRootLayoutContentEvent;
 
 
+/**
+ * @author jp
+ */
+
 public class AppPresenter extends Presenter<AppPresenter.AppView, AppPresenter.AppProxy> {
 
 	public interface AppView extends View {

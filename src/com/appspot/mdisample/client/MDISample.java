@@ -6,6 +6,10 @@ import com.google.gwt.core.client.GWT;
 import com.gwtplatform.mvp.client.DelayedBindRegistry;
 
 
+/**
+ * @author jp
+ */
+
 public class MDISample implements EntryPoint {
 	public final ClientGinjector ginjector = GWT.create(ClientGinjector.class);
 

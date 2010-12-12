@@ -10,6 +10,10 @@ import com.google.inject.Provider;
 import com.gwtplatform.mvp.client.EventBus;
 
 
+/**
+ * @author jp
+ */
+
 public class AbstractContentPresenterProvider<P extends AbstractContentPresenter, V extends AbstractContentView>
 		implements Provider<AbstractContentPresenter> {
 

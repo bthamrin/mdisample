@@ -7,6 +7,10 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
 
+/**
+ * @author jp
+ */
+
 public class HomeViewImpl extends Composite implements HomeView {
 
 	private static HomeViewImplUiBinder uiBinder = GWT.create(HomeViewImplUiBinder.class);

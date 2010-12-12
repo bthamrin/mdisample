@@ -14,6 +14,10 @@ import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
 
 
+/**
+ * @author jp
+ */
+
 public class ListViewImpl extends ViewImpl implements ListPresenter.ListView {
 
 	private static ListViewImplUiBinder uiBinder = GWT.create(ListViewImplUiBinder.class);

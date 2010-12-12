@@ -18,6 +18,7 @@ import com.gwtplatform.mvp.client.ViewWithControls;
 /**
  * @author Christian Goudreau
  */
+
 public class NavigationTabView extends ViewWithControls<NavigationTabView.MyControls> implements MyView {
 	private static Binder uiBinder = GWT.create(Binder.class);
 

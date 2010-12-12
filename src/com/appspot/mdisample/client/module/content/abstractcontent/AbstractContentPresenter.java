@@ -10,6 +10,10 @@ import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 
 
+/**
+ * @author jp
+ */
+
 public abstract class AbstractContentPresenter
 		extends
 		Presenter<AbstractContentPresenter.AbstractContentView, AbstractContentPresenter.AbstractContentProxy<AbstractContentPresenter>>

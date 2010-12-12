@@ -15,6 +15,10 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
 
+/**
+ * @author jp
+ */
+
 public class TabElement extends Composite implements HasCloseTabHandlers {
 	private static Binder uiBinder = GWT.create(Binder.class);
 

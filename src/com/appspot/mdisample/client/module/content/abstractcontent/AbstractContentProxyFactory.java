@@ -9,6 +9,10 @@ import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.ProxyFailureHandler;
 
 
+/**
+ * @author jp
+ */
+
 public class AbstractContentProxyFactory<P extends AbstractContentPresenter, V extends AbstractContentView> {
 
 	private Provider<AbstractContentPresenterProvider<P, V>> provider;

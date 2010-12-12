@@ -36,6 +36,7 @@ import com.gwtplatform.mvp.client.proxy.ProxyFailureHandler;
  * @author Olivier Monaco
  * @author Christian Goudreau
  */
+
 public class NavigationTabPresenter extends PresenterWidget<NavigationTabPresenter.MyView> implements
 		NavigationTabHandler, MyControls {
 	public interface MyView extends View, HasControls<MyControls> {

@@ -6,6 +6,10 @@ import com.gwtplatform.mvp.client.EventBus;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 
 
+/**
+ * @author jp
+ */
+
 public class DetailPresenter extends AbstractContentPresenter {
 
 	public interface DetailProxy extends AbstractContentPresenter.AbstractContentProxy<DetailPresenter> {

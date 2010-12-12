@@ -14,6 +14,10 @@ import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
 
 
+/**
+ * @author jp
+ */
+
 public class DetailViewImpl extends ViewImpl implements DetailPresenter.DetailView {
 
 	private static DetailViewImplUiBinder uiBinder = GWT.create(DetailViewImplUiBinder.class);

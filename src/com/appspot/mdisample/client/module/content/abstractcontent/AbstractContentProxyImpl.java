@@ -17,6 +17,10 @@ import com.gwtplatform.mvp.client.proxy.ProxyImpl;
 import com.gwtplatform.mvp.client.proxy.ProxyPlaceImpl;
 
 
+/**
+ * @author jp
+ */
+
 public class AbstractContentProxyImpl<P extends AbstractContentPresenter, V extends AbstractContentView> extends
 		ProxyPlaceImpl<AbstractContentPresenter> implements AbstractContentProxy<P> {
 

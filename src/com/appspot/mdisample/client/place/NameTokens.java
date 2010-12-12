@@ -1,6 +1,10 @@
 package com.appspot.mdisample.client.place;
 
 
+/**
+ * @author jp
+ */
+
 public class NameTokens {
 
 	public static final String home = "!home";

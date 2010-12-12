@@ -8,6 +8,10 @@ import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 
 
+/**
+ * @author jp
+ */
+
 public class ListPresenter extends AbstractContentPresenter {
 
 	public interface ListProxy extends AbstractContentPresenter.AbstractContentProxy<ListPresenter> {

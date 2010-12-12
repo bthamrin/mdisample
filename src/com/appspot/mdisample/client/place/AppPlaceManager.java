@@ -8,6 +8,10 @@ import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.gwtplatform.mvp.client.proxy.TokenFormatter;
 
 
+/**
+ * @author jp
+ */
+
 public class AppPlaceManager extends PlaceManagerImpl {
 
 	@Inject

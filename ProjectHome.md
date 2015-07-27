@@ -1,0 +1,1 @@
+A simple MDI sample application using GWT-Platform. It is based on a sample application made by Christian Goudreau and Olivier Monaco.
